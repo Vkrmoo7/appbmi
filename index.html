@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Asian BMI Calculator is to calculate Body Mass Index designed specifically for Asians due to different lifestyle, health and eating habits.">
+        <title>PWA |BMI Calc</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon"> <!-- 16 x 16 pixels --> 
+        
+        <!-- Manifest -->
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#e7951b">
+        <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+          
+          <!-- Input Section -->
+          <div class="form-section">
+            <h2 class="display-4 mb-3">B M I calculator</h2>
+            <form>
+              <div class="form-group">
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" class="form-control form-control-lg" id="age" placeholder="Enter your age" required>
+              </div>
+              <div class="form-group">
+                <label for="gender" class="form-label">Gender:</label>
+                <select class="form-control form-control-lg" id="gender" required>
+                  <option value="">Select your gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="hIn" class="form-label">Height (cm):</label>
+                <input type="number" class="form-control form-control-lg" id="hIn" placeholder="Enter your height" required>
+              </div>
+              <div class="form-group">
+                <label for="wIn" class="form-label">Weight (kg):</label>
+                <input type="number" class="form-control form-control-lg" id="wIn" placeholder="Enter your weight" required>
+              </div>
+             
+            </form>
+          </div>
+
+          <!-- Result Section -->
+          <div class="result-section">
+            <div id="output">
+              <div class="card bg-primary mb-2">
+                <div class="card-block">
+                  <h4>Your BMI is <span id="bmi"></span>.</h4>
+                </div>
+              </div>
+            </div>
+
+            <div id="bmi-chart">
+            </div>
+          </div>
+
+        </div>
+
+        <script src="js/app.js"></script>
+        <script src="js/zingchart.js"></script>
+    </body>
+</html>
